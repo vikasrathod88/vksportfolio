@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-4 border-0 rounded-4">
+        <h2 class="text-center text-primary mb-4">Contact Us</h2>
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          
+          <!-- Name -->
+          <div class="form-floating mb-3">
+            <input type="text" id="name" class="form-control" name="name" placeholder="Full Name" ngModel required>
+            <label for="name">Full Name</label>
+          </div>
+
+          <!-- Email -->
+          <div class="form-floating mb-3">
+            <input type="email" id="email" class="form-control" name="email" placeholder="Email Address" ngModel required email>
+            <label for="email">Email Address</label>
+          </div>
+
+          <!-- Message -->
+          <div class="form-floating mb-3">
+            <textarea id="message" class="form-control" rows="4" name="message" placeholder="Your Message" ngModel required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100 py-2">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

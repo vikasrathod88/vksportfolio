@@ -1,0 +1,26 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .footer-link {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-link:hover {
+    color: #0d6efd; /* Bootstrap primary blue */
+  }
+  
+  .social-link {
+    font-size: 1.5rem;
+    color: #bbb;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-link:hover {
+    color: #0d6efd;
+  }
+  

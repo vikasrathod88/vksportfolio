@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h2 class="text-start text-white mb-4">My Skills</h2>
+
+  <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let skill of skills">
+          <div class="card shadow-lg skill-card">
+              <div class="card-body text-center">
+                  <h5 class="card-title">{{ skill.category }}</h5>
+                  <ul class="list-unstyled mt-3">
+                      <li *ngFor="let item of skill.items">
+                          <i class="fa-solid fa-check-circle"></i> {{ item }}
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

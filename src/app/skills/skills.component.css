@@ -1,0 +1,27 @@
+/* Skill Card Styling */
+.skill-card {
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1E2A38, #405D8A); /* Deep Blue Gradient */
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  padding: 20px;
+}
+
+/* Card Title */
+.card-title {
+  font-weight: bold;
+  color: #00eaff; /* Bright Cyan */
+}
+
+/* Icon Color */
+.fa-check-circle {
+  margin-right: 8px;
+  color: #ffcc00; /* Golden Yellow */
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 123, 255, 0.4);
+}

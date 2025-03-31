@@ -1,0 +1,43 @@
+/* Background with Subtle Gradient */
+.error-page {
+  height: 100vh;
+ 
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+/* 404 Error Code - Neon Glow Effect */
+.error-code {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #ff3860; /* Bright Red */
+  /* text-shadow: 0 0 10px #ff3860, 0 0 40px #ff3860, 0 0 80px #ff3860; */
+  /* animation: glow 1.5s infinite alternate; */
+}
+
+/* Glow Animation */
+@keyframes glow {
+  from {
+      text-shadow: 0 0 10px #ff3860, 0 0 40px #ff3860, 0 0 80px #ff3860;
+  }
+  to {
+      text-shadow: 0 0 20px #ff3860, 0 0 60px #ff3860, 0 0 100px #ff3860;
+  }
+}
+
+/* Button Styling */
+.btn-glow {
+  background: #ff3860;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 56, 96, 0.4);
+}
+
+.btn-glow:hover {
+  background: #ff1744;
+  box-shadow: 0px 8px 20px rgba(255, 23, 68, 0.6);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row align-items-center">
+    <!-- Left: Image -->
+    <div class="col-lg-4 text-center">
+      <img src="assets/img.jpg" alt="Profile Picture" class="profile-img">
+    </div>
+
+    <!-- Right: Info -->
+    <div class="col-lg-8 mt-4 text-white">
+      <h2 class="fw-bold">Hi, I'm <span class="highlight">{{ about.name }}</span></h2>
+      <h4 class="text-primary fw-semibold">{{ about.role }}</h4>
+      <p class="fw-light">{{ about.description }}</p>
+
+      <h5 class="text-white fw-bold">Key Skills:</h5>
+      <ul class="list-unstyled skills-list">
+        <li *ngFor="let skill of about.skills">
+          <i [class]="skill.icon"></i> {{ skill.name }}
+        </li>
+      </ul>
+
+      <!-- <a [href]="about.resumeLink" download class="btn btn-primary download-btn">
+        Download CV <i class="fa-solid fa-download"></i>
+      </a> -->
+
+      <a href="assets/profile.pdf" class="btn btn-primary" download="profile.pdf">
+        Download CV <i class="fa-solid fa-download"></i>
+    </a>
+    </div>
+  </div>
+</div>
