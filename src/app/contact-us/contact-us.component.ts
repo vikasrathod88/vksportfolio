@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })

@@ -47,8 +47,8 @@
 
 /* Hexagon Image Styling */
 .hexagon-img {
-    max-width: 250px;
-    height: 250px;
+    max-width: 373px;
+    height: 354px;
     object-fit: cover;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
