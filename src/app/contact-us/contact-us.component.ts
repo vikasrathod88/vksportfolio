@@ -13,6 +13,7 @@ export class ContactUsComponent {
   successMessage = '';
   errorMessage = '';
 
+
   constructor(private http: HttpClient) {}
 
   onSubmit(contactForm: NgForm) {
@@ -22,6 +23,7 @@ export class ContactUsComponent {
 
     const formData = new FormData();
     formData.append('access_key', '56f66bb4-c56c-49a6-a6b1-bb29c637ed28'); // Replace with your Web3Forms key
+    formData.append('from_name', contactForm.value.name); // Sending hidden field
     formData.append('name', contactForm.value.name);
     formData.append('email', contactForm.value.email);
     formData.append('message', contactForm.value.message);
@@ -39,7 +41,7 @@ export class ContactUsComponent {
   }
 
   showMessage(type: 'success' | 'error', message: string) {
-    if (type === 'success') {
+    if (type=== 'success') {
       this.successMessage = message;
       this.errorMessage = '';
     } else {
@@ -47,50 +49,11 @@ export class ContactUsComponent {
       this.successMessage = '';
     }
 
-    // Hide message after 2 seconds
+    // Hide message after 5 seconds
     setTimeout(() => {
       this.successMessage = '';
       this.errorMessage = '';
-    }, 4000);
+    }, 5000);
   }
-
-
-
-
-  // successMessage = '';
-  // errorMessage = '';
-
-  // constructor(private http: HttpClient) {}
-
-  // onSubmit(contactForm: NgForm) {
-  //   debugger;
-  //   if (contactForm.invalid) {
-  //     return;
-  //   }
-
-  //   const formData = new FormData();
-  //   formData.append('access_key', '56f66bb4-c56c-49a6-a6b1-bb29c637ed28'); // Replace with your Web3Forms key
-  //   formData.append('name', contactForm.value.name);
-  //   formData.append('email', contactForm.value.email);
-  //   formData.append('message', contactForm.value.message);
-  //   debugger;
-  //   this.http.post('https://api.web3forms.com/submit', formData)
-  //     .subscribe({
-  //       next: () => {
-  //         this.successMessage = 'Your message has been sent successfully!';
-  //         this.errorMessage = '';
-  //         contactForm.resetForm();
-  //       },
-  //       error: () => {
-  //         this.successMessage = '';
-  //         this.errorMessage = 'Something went wrong. Please try again!';
-  //       }
-  //     });
-  // }
-
-
-
-
-
 
 }

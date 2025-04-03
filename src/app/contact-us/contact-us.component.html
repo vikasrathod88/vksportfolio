@@ -12,13 +12,15 @@
           {{ errorMessage }}
         </div>
         <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+            <!-- Hidden Input Field for 'from_name' -->
+           <input type="hidden" name="from_name" [value]="contactForm.value.name">
           <!-- Name -->
           <div class="form-floating mb-3">
             <input type="text" id="name" class="form-control" name="name" placeholder="Full Name" ngModel #name="ngModel" required minlength="3">
             <label for="name">Full Name</label>
             <div *ngIf="name.invalid && name.touched" class="text-danger small">
               <div *ngIf="name.errors?.['required']">Name is required.</div>
-              <div *ngIf="name.errors?.['minlength']">Name must be at least 3 characters long.</div>
+              <div *ngIf="name.errors?.['minlength']">Name must be at least 3 char</div>
             </div>
           </div>
 
@@ -38,7 +40,7 @@
             <label for="message">Your Message</label>
             <div *ngIf="message.invalid && message.touched" class="text-danger small">
               <div *ngIf="message.errors?.['required']">Message is required.</div>
-              <div *ngIf="message.errors?.['minlength']">Message must be at least 10 characters long.</div>
+              <div *ngIf="message.errors?.['minlength']">Message must be at least 10 char</div>
             </div>
           </div>
 
