@@ -1,10 +1,17 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="card shadow-lg p-4 border-0 rounded-4">
         <h2 class="text-center text-primary mb-4">Contact Us</h2>
-        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-          
+
+         <!-- Success & Error Messages -->
+         <div *ngIf="successMessage" class="text-success mb-2 text-center">
+          {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="text-danger mb-2 text-center">
+          {{ errorMessage }}
+        </div>
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
           <!-- Name -->
           <div class="form-floating mb-3">
             <input type="text" id="name" class="form-control" name="name" placeholder="Full Name" ngModel #name="ngModel" required minlength="3">
@@ -38,7 +45,11 @@
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary w-100 py-2" [disabled]="contactForm.invalid">Send Message</button>
         </form>
+
+       
       </div>
     </div>
   </div>
 </div>
+
+
