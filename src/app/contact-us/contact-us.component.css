@@ -22,3 +22,7 @@ button {
 .btn {
   font-size: 16px;
 }
+.message-container {
+  min-height: 30px; /* Ensures space is reserved */
+}
+

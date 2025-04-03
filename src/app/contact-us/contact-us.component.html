@@ -2,21 +2,24 @@
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="card shadow-lg p-4 border-0 rounded-4">
-        <h2 class="text-center text-primary mb-4">Contact Us</h2>
+        <h2 class="text-center text-primary mb-2">Contact Us</h2>
 
-         <!-- Success & Error Messages -->
-         <div *ngIf="successMessage" class="text-success mb-2 text-center">
-          {{ successMessage }}
-        </div>
-        <div *ngIf="errorMessage" class="text-danger mb-2 text-center">
-          {{ errorMessage }}
+        <!-- Success & Error Messages -->
+        <div class="message-container min-vh-5 d-flex align-items-center justify-content-center">
+          <div *ngIf="successMessage" class="text-success text-center fw-bold">
+            {{ successMessage }}
+          </div>
+          <div *ngIf="errorMessage" class="text-danger text-center fw-bold">
+            {{ errorMessage }}
+          </div>
         </div>
         <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-            <!-- Hidden Input Field for 'from_name' -->
-           <input type="hidden" name="from_name" [value]="contactForm.value.name">
+          <!-- Hidden Input Field for 'from_name' -->
+          <input type="hidden" name="from_name" [value]="contactForm.value.name">
           <!-- Name -->
           <div class="form-floating mb-3">
-            <input type="text" id="name" class="form-control" name="name" placeholder="Full Name" ngModel #name="ngModel" required minlength="3">
+            <input type="text" id="name" class="form-control" name="name" placeholder="Full Name" ngModel
+              #name="ngModel" required minlength="3">
             <label for="name">Full Name</label>
             <div *ngIf="name.invalid && name.touched" class="text-danger small">
               <div *ngIf="name.errors?.['required']">Name is required.</div>
@@ -26,7 +29,8 @@
 
           <!-- Email -->
           <div class="form-floating mb-3">
-            <input type="email" id="email" class="form-control" name="email" placeholder="Email Address" ngModel #email="ngModel" required email>
+            <input type="email" id="email" class="form-control" name="email" placeholder="Email Address" ngModel
+              #email="ngModel" required email>
             <label for="email">Email Address</label>
             <div *ngIf="email.invalid && email.touched" class="text-danger small">
               <div *ngIf="email.errors?.['required']">Email is required.</div>
@@ -36,7 +40,8 @@
 
           <!-- Message -->
           <div class="form-floating mb-3">
-            <textarea id="message" class="form-control" rows="4" name="message" placeholder="Your Message" ngModel #message="ngModel" required minlength="10"></textarea>
+            <textarea id="message" class="form-control" rows="4" name="message" placeholder="Your Message" ngModel
+              #message="ngModel" required minlength="10"></textarea>
             <label for="message">Your Message</label>
             <div *ngIf="message.invalid && message.touched" class="text-danger small">
               <div *ngIf="message.errors?.['required']">Message is required.</div>
@@ -45,13 +50,12 @@
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary w-100 py-2" [disabled]="contactForm.invalid">Send Message</button>
+          <button type="submit" class="btn btn-primary w-100 py-2" [disabled]="contactForm.invalid">Send
+            Message</button>
         </form>
 
-       
+
       </div>
     </div>
   </div>
 </div>
-
-
