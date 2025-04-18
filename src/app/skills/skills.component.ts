@@ -17,13 +17,19 @@ export class SkillsComponent {
       category: 'Backend Development',
       items: ['.NET Core', 'REST API', 'SQL Server']
     },
+   
     {
       category: 'Cloud & DevOps',
       items: ['Azure DevOps', 'Basic Azure', 'Microsoft Graph APIs']
+    },
+    {
+      category: 'Cross-Platform Development',
+      items: ['.NET MAUI']
     },
     {
       category: 'Version Control',
       items: ['Git', 'GitHub']
     }
   ];
+  
 }

@@ -32,6 +32,15 @@ export class ProjectsComponent {
       duration: '8 Days',
       image: 'assets/img.jpg',
       link: '#'
+    },
+    {
+      title: 'Chat Application',
+      description: 'A cross-platform real-time chat application built with .NET MAUI, featuring a modern WhatsApp-style UI, SignalR-based communication, and support for mobile and desktop responsiveness.',
+      techStack: '.NET MAUI, SignalR, MVVM Toolkit, C#',
+      duration: '2 Months',
+      image: 'assets/img.jpg',
+      link: '#'
     }
+     
   ];
 }

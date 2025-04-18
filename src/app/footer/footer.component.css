@@ -13,6 +13,9 @@
     color: #0d6efd; /* Bootstrap primary blue */
   }
   
+  .link-f:hover {
+    color: #0d6efd; /* Bootstrap primary color or any color you prefer */
+}
   .social-link {
     font-size: 1.5rem;
     color: #bbb;
