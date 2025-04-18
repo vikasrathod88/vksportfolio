@@ -20,7 +20,7 @@ export class ProjectsComponent {
     {
       title: 'Employee Manager',
       description: 'A task management system with drag-and-drop functionality and user authentication.',
-      techStack: 'Angular, .Net Core, Rest API',
+      techStack: '.Net MAUI, .Net Core, Rest API',
       duration: '3 Months',
       image: 'assets/img.jpg',
       link: '#'

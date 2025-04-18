@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ServicesComponent } from './services/services.component';
+import { ChatComponent } from './chat/chat.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path: 'contactUs', component: ContactUsComponent},
     {path: 'footer', component: FooterComponent},
     {path: 'services', component: ServicesComponent},
+    {path: 'chat', component: ChatComponent},
     {path: '**', component: PageNotFoundComponent}
 ];

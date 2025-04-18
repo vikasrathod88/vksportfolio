@@ -24,9 +24,9 @@ export class ContactUsComponent {
     const formData = new FormData();
     formData.append('access_key', '56f66bb4-c56c-49a6-a6b1-bb29c637ed28'); // Replace with your Web3Forms key
     formData.append('from_name', contactForm.value.name); // Sending hidden field
-    formData.append('name', contactForm.value.name);
-    formData.append('email', contactForm.value.email);
+    // formData.append('name', contactForm.value.name);
     formData.append('message', contactForm.value.message);
+    formData.append('email', contactForm.value.email);
 
     this.http.post('https://api.web3forms.com/submit', formData)
       .subscribe({

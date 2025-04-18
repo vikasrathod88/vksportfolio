@@ -3,6 +3,7 @@ import { AboutComponent } from "../about/about.component";
 import { ContactUsComponent } from "../contact-us/contact-us.component";
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { log } from 'node:console';
+import { NgFor } from '@angular/common';
 
 
 @Component({
